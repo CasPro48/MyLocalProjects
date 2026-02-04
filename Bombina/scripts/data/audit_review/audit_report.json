@@ -1,0 +1,25 @@
+{
+  "timestamp": "2026-02-04T18:02:49.941957",
+  "total_samples": 14338,
+  "average_score": 49.56,
+  "grade_distribution": {
+    "D": 3915,
+    "C": 4240,
+    "F": 3023,
+    "B": 2763,
+    "A": 397
+  },
+  "common_issues": {
+    "No detection awareness - should mention risks": 4169,
+    "Missing trade-off analysis": 2735,
+    "Low reasoning depth - lacks explanation of why": 1489,
+    "Shallow language detected: 'simple'": 209,
+    "Output too short - lacks detail": 109,
+    "Shallow language detected: 'easy'": 63,
+    "CRITICAL: Command-only output - teaches nothing": 2
+  },
+  "critical_count": 3023,
+  "weak_count": 3915,
+  "good_count": 3160,
+  "quality_percentage": 22.0
+}
