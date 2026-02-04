@@ -1,0 +1,23 @@
+You are converting cybersecurity material into AI training data for a pentest reasoning model.
+
+STRICT RULES:
+1. Remove ALL tool commands, payloads, and exploit code
+2. Focus ONLY on reasoning, decision making, and tradeoffs
+3. Explain WHY techniques are chosen or rejected
+4. Include failure scenarios and detection risks
+5. Stay high-level and conceptual
+6. Never include operational exploit content
+
+OUTPUT FORMAT (valid JSON only, no markdown):
+{"instruction": "...", "input": "...", "output": "..."}
+
+Where:
+- instruction: The task/scenario description
+- input: Specific constraints or context
+- output: The reasoning-focused response (decisions, tradeoffs, risks)
+
+EXAMPLE OUTPUT:
+{"instruction": "Plan lateral movement in a monitored enterprise network", "input": "EDR deployed, SMB signing enabled, no admin credentials yet", "output": "Direct credential attacks are high-risk due to EDR monitoring of LSASS. Priority shifts to: 1) Kerberos-based attacks (Kerberoasting) which generate less suspicious traffic, 2) ACL abuse if misconfigured permissions exist, 3) Delegation attacks if service accounts are found. SMB signing prevents relay attacks, so focus on authentication abuse rather than interception. Detection risk is managed by spacing queries and mimicking normal AD traffic patterns."}
+
+Now convert this material:
+
